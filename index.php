@@ -1,5 +1,6 @@
 <?php
  include 'database/connexion.php';
+ $project_name = "My T-Shirt";
 ?>  
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +26,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#page-top">MY T-SHIRT</a>
+                <a class="navbar-brand" href="#page-top"><?php echo $project_name;?></a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
@@ -60,7 +61,7 @@
                         <h2 class="text-white mt-0">We've got what you need!</h2>
                         <hr class="divider divider-light" />
                         <p class="text-white-75 mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! Choose one of our open source, free to download, and easy to use themes! No strings attached!</p>
-                        <a class="btn btn-light btn-xl" href="#services">Get Started!</a>
+                        <a class="btn btn-light btn-xl" href="#choose_fav_t-shirt">Get Started!</a>
                     </div>
                 </div>
             </div>
@@ -107,56 +108,56 @@
             <div class="container-fluid p-0">
                 <div class="row g-0">
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/1.jpeg" title="Project Name">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/1.jpeg" title=<?php echo $project_name;?>>
                             <img class="img-fluid" src="assets/img/portfolio/thumbnails/1.jpeg" alt="..." />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
+                                <div class="project-name"><?php echo $project_name;?></div>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpeg" title="Project Name">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpeg" title=<?php echo $project_name;?>>
                             <img class="img-fluid" src="assets/img/portfolio/thumbnails/2.jpeg" alt="..." />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
+                                <div class="project-name"><?php echo $project_name;?></div>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpeg" title="Project Name">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpeg" title=<?php echo $project_name;?>>
                             <img class="img-fluid" src="assets/img/portfolio/thumbnails/3.jpeg" alt="..." />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
+                                <div class="project-name"><?php echo $project_name;?></div>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/4.jpeg" title="Project Name">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/4.jpeg" title=<?php echo $project_name;?>>
                             <img class="img-fluid" src="assets/img/portfolio/thumbnails/4.jpeg" alt="..." />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
+                                <div class="project-name"><?php echo $project_name;?></div>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpeg" title="Project Name">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpeg" title=<?php echo $project_name;?>>
                             <img class="img-fluid" src="assets/img/portfolio/thumbnails/5.jpeg" alt="..." />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
+                                <div class="project-name"><?php echo $project_name;?></div>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.jpeg" title="Project Name">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.jpeg" title=<?php echo $project_name;?>>
                             <img class="img-fluid" src="assets/img/portfolio/thumbnails/6.jpeg" alt="..." />
                             <div class="portfolio-box-caption p-3">
                                 <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
+                                <div class="project-name"><?php echo $project_name;?></div>
                             </div>
                         </a>
                     </div>
@@ -164,7 +165,7 @@
             </div>
         </div>
         <!-- Call to action-->
-        <section class="page-section bg-dark text-white">
+        <section id="choose_fav_t-shirt" class="page-section bg-dark text-white">
             <div class="container px-4 px-lg-5 text-center">
                 <h2 class="mb-4">CHOOSE YOUR FAVORITE T-SHIRT</h2>
                 <a class="btn btn-light btn-xl" onclick="document.getElementById('choice_section').style.display='block'" >Start</a>
