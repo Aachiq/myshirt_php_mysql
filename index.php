@@ -19,7 +19,7 @@
         <!-- SimpleLightbox plugin CSS-->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/styles.css"/>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -107,8 +107,8 @@
             <div class="container-fluid p-0">
                 <div class="row g-0">
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/1.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/1.jpg" alt="..." />
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/1.jpeg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/1.jpeg" alt="..." />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50">Category</div>
                                 <div class="project-name">Project Name</div>
@@ -116,8 +116,8 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/2.jpg" alt="..." />
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpeg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/2.jpeg" alt="..." />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50">Category</div>
                                 <div class="project-name">Project Name</div>
@@ -125,8 +125,8 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/3.jpg" alt="..." />
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpeg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/3.jpeg" alt="..." />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50">Category</div>
                                 <div class="project-name">Project Name</div>
@@ -134,8 +134,8 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/4.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/4.jpg" alt="..." />
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/4.jpeg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/4.jpeg" alt="..." />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50">Category</div>
                                 <div class="project-name">Project Name</div>
@@ -143,8 +143,8 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/5.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/5.jpg" alt="..." />
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpeg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/5.jpeg" alt="..." />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50">Category</div>
                                 <div class="project-name">Project Name</div>
@@ -152,8 +152,8 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/6.jpg" alt="..." />
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.jpeg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/6.jpeg" alt="..." />
                             <div class="portfolio-box-caption p-3">
                                 <div class="project-category text-white-50">Category</div>
                                 <div class="project-name">Project Name</div>
@@ -166,16 +166,69 @@
         <!-- Call to action-->
         <section class="page-section bg-dark text-white">
             <div class="container px-4 px-lg-5 text-center">
-                <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-                <a class="btn btn-light btn-xl" >Download Now!</a>
+                <h2 class="mb-4">CHOOSE YOUR FAVORITE T-SHIRT</h2>
+                <a class="btn btn-light btn-xl" onclick="document.getElementById('choice_section').style.display='block'" >Start</a>
             </div>
         </section>
+        <!-- START INTEGRATED PART -->
+        <div class="container" style="display:none" id="choice_section">
+            <div class="row p-4" >
+                <div class="col-md-6">
+                    <div id="tshirt-div" style="width: 452px;height: 548px;position: relative;background-color: #fff;">
+                        <img id="tshirt-backgroundpicture" src="images/background_tshirt.png" />
+                        <div id="drawingArea" class="drawing-area" style="position: absolute;top: 60px;left: 122px;z-index: 10;width: 200px;height: 400px;">					
+                            <div class="canvas-container" style="width: 200px; height: 400px; position: relative; user-select: none;">
+                                <canvas id="tshirt-canvas" width="200" height="400" style="position: absolute;width: 200px;height: 400px; left: 0px; top: 0px; user-select: none; cursor: default;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">  
+                
+                  <h3 class="text-primary">Commander</h3> 
+                    <label for="tshirt-color">T-Shirt Color:</label>
+                    <select id="tshirt-color">
+                        <option value="#fff">White</option>
+                        <option value="#f00">Red</option>
+                        <option value="#008000">Green</option>
+                        <option value="#ff0">Yellow</option>
+                    </select>
+                    <br><br>
+                    <label type="btn-add-text">Add Text</label>
+                    <input type="text" id="txt-text">
+                    <button class="btn btn-primary" id="btn-add-text" onclick="add_Text();">Add Text</button>
+                    <br><br>
+                    <label for="tshirt-custompicture">Upload your own design:</label>
+                    <input type="file" id="tshirt-custompicture" />
+                    <br>
+                    <label for="Download-image-result">Download image Result </label>
+                    <button class="btn btn-primary" onclick="Download_image()">Download </button>
+                    <br>
+                    <form action="add_order.php" method="post">
+                        <lable>Nom Complet </lable>
+                        <input class="form-control" name="fullname" type="text">
+                        <lable>Numéro Telephone </lable>
+                        <input class="form-control" name="phone" type="text">
+                        <lable>Adresse </lable>
+                        <input class="form-control" name="adress" type="text"> <br>
+                        <label for="tshirt-custompicture">Chosen T-shirt</label>
+                        <input type="file" id="tshirt-custompicture" />
+                        <button type="submit" class="btn btn-primary">Valider</button>
+                    </form>
+
+                </div>
+
+                
+            </div>
+               
+        </div>
+        <!-- END INTEGRATED PART -->
         <!-- Contact-->
         <section class="page-section" id="contact">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 col-xl-6 text-center">
-                        <h2 class="mt-0">Let's Get In Touch!</h2>
+                        <h2 class="mt-0">CONTACT US</h2>
                         <hr class="divider" />
                         <p class="text-muted mb-5">Ready to start your next project with us? Send us a messages and we will get back to you as soon as possible!</p>
                     </div>
@@ -230,6 +283,13 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <!-- Js Library -->
+        <!-- Include Fabric.js in the page -->
+        <script src="js/fabric.min.js"></script>
+        <!-- Include dom-to-image.js in the page -->
+        <script src="js/dom-to-image.min.js"></script>
+        <script src="js/script2.js" ></script>
+        <!-- end JS library link -->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
