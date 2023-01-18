@@ -15,13 +15,6 @@ let canvas = new fabric.Canvas('tshirt-canvas');
                 document.getElementById("tshirt-div").style.backgroundColor = this.value;
             }, false);
 
-            // Update the TShirt color according to the selected color by the user
-            document.getElementById("tshirt-design").addEventListener("change", function(){
-
-                // Call the updateTshirtImage method providing as first argument the URL
-                // of the image provided by the select
-                updateTshirtImage(this.value);
-            }, false);
 
             // When the user clicks on upload a custom picture
             document.getElementById('tshirt-custompicture').addEventListener("change", function(e){
