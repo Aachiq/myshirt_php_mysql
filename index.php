@@ -175,7 +175,7 @@
         <section id="choose_fav_t-shirt" class="page-section bg-dark text-white">
             <div class="container px-4 px-lg-5 text-center">
                 <h2 class="mb-4">CHOOSE YOUR FAVORITE T-SHIRT</h2>
-                <a class="btn btn-light btn-xl" onclick="document.getElementById('choice_section').style.display='block'" >Start</a>
+                <a class="btn btn-light btn-xl" onclick="$('#choice_section').slideToggle();" >Start</a>
             </div>
         </section>
         <!-- START INTEGRATED PART -->
@@ -212,16 +212,18 @@
                     <label for="Download-image-result">Download image Result </label>
                     <button class="btn btn-primary" onclick="Download_image()">Download </button>
                     <br>
-                    <form action="add_order.php" method="post">
+                    <form id="frm_Add_Order" action="add_order.php" method="post">
                         <lable>Nom Complet </lable>
-                        <input class="form-control" name="fullname" type="text">
+                        <input class="form-control" name="fullname" id="txt_fullname"type="text">
+                        <lable>Adresse Electronique </lable>
+                        <input class="form-control" name="email" id="txt_email" type="email">
                         <lable>Numéro Telephone </lable>
-                        <input class="form-control" name="phone" type="text">
+                        <input class="form-control" name="phone" id="txt_phone" type="text" max="10">
                         <lable>Adresse </lable>
-                        <input class="form-control" name="adress" type="text"> <br>
+                        <input class="form-control" name="adress" id="txt_adress" type="text"> <br>
                         <label for="tshirt-custompicture">Chosen T-shirt</label>
                         <input type="file" id="tshirt-custompicture" />
-                        <button type="submit" class="btn btn-primary">Valider</button>
+                        <button id="frm_Add_Order_Submit" type="submit" class="btn btn-primary">Valider</button>
                     </form>
 
                 </div>
