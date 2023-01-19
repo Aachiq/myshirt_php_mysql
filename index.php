@@ -199,6 +199,7 @@
                         <option value="#fff">White</option>
                         <option value="#f00">Red</option>
                         <option value="#008000">Green</option>
+                        <option value="#00f">Blue</option>
                         <option value="#ff0">Yellow</option>
                     </select>
                     <br><br>
