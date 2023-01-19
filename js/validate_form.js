@@ -1,39 +1,37 @@
 //On ready : all HTML Content are loaded
 
 $(function() {
-    $('#frm_Add_Order_Submit').bind('click',function(event){
+    $('#frm_Add_Order').submit(function(event){
         //Stop refreshing
         event.preventDefault();
 
-        if(!isValide())
-        console.log('non valide')
-        else
-        console.log('is valid')
-       
-
+        if(!isValide()){
+        console.log('non valide');
+        return;
+        }
+     
         console.log('ready to insert ...');
+        console.log( );
         //it's valide
+        let fullName = $.trim($('#txt_fullname').val());
+        let phone  = $.trim($('#txt_phone').val());
+        let email  = $.trim($('#txt_email').val());
+        let adresse  = $.trim($('#txt_adress').val());
 
-       /* $.ajax({ url: '../add_order.php',
-         data: {action: 'test'},
+        let image = 'demo_Image';
+
+        $.ajax({ url: './add_order.php',
+         data: {'fullname':fullName, 'phone':phone, 'email': email, 'adress': adresse,'image_tshirt': image},
          type: 'post',
          success: function(output) {
                       alert(output);
                   }
-});*/
+});
 
 
 
         
 
-    });
-
-
-
-    $( "frm_Add_Order" ).submit(function( event ) {
-        console.log('pk');
-        console.log( $( this ).serializeArray() );
-        event.preventDefault();
     });
     
 });
