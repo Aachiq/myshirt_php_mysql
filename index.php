@@ -218,7 +218,7 @@
                         <lable>Adresse Electronique </lable>
                         <input class="form-control" name="email" id="txt_email" type="email">
                         <lable>Numéro Telephone </lable>
-                        <input class="form-control" name="phone" id="txt_phone" type="text" max="10">
+                        <input class="form-control" name="phone" id="txt_phone" type="text" maxlength="10">
                         <lable>Adresse </lable>
                         <input class="form-control" name="adress" id="txt_adress" type="text"> <br>
                         <!--label for="tshirt-custompicture">Chosen T-shirt</label>

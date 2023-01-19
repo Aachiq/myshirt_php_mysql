@@ -40,7 +40,7 @@ $(function() {
                             success: function(output) {
                                         if(output){
                                             $.alert({
-                                                title: 'Bravo!',
+                                                title: 'Félicitation',
                                                 type: 'green',
                                                 content: 'Nous vous remercionsn pour votre commande. Conformément à notre offre, nous vous fournissons le t-shirt suivant:\n <img src="'+image+'" />',
                                             });
