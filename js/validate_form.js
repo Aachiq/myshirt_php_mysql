@@ -11,39 +11,54 @@ $(function() {
         }
      
         console.log('ready to insert ...');
-        console.log( );
-        //it's valide
-        let fullName = $.trim($('#txt_fullname').val());
-        let phone  = $.trim($('#txt_phone').val());
-        let email  = $.trim($('#txt_email').val());
-        let adresse  = $.trim($('#txt_adress').val());
+        $.alert({
+            title: 'Confirmation',
+            type: 'blue',
+            content: 'Message de confirmation de la commande: ',
+        buttons: {   
+            ok: {
+                text: "ok!",
+                btnClass: 'btn-primary',
+                keys: ['enter'],
+                action: function(){
+                     
+                    let fullName = $.trim($('#txt_fullname').val());
+                    let phone  = $.trim($('#txt_phone').val());
+                    let email  = $.trim($('#txt_email').val());
+                    let adresse  = $.trim($('#txt_adress').val());
 
-        
-        var node = document.getElementById('tshirt-div');
-        domtoimage.toPng(node).then(function (dataUrl) {
-            // Print the data URL of the picture in the Console
-            console.log(dataUrl);
+                    
+                    var node = document.getElementById('tshirt-div');
+                    domtoimage.toPng(node).then(function (dataUrl) {
+                        // Print the data URL of the picture in the Console
+                        console.log(dataUrl);
 
-            let image = dataUrl;
-            $.ajax({ url: './add_order.php',
-                data: {'fullname':fullName, 'phone':phone, 'email': email, 'adress': adresse,'image_tshirt': image},
-                type: 'post',
-                success: function(output) {
-                            if(output){
-                                $.alert({
-                                    title: 'Bravo!',
-                                    type: 'green',
-                                    content: 'Votre commande est inserer avec success\n <img src="'+image+'" />',
-                                });
-                            }
-                        }
-                });
-            console.log('get image : '+image);
-        }).catch(function (error) {
-            console.error('oops, something went wrong!', error);
-        });
-
-        
+                        let image = dataUrl;
+                        $.ajax({ url: './add_order.php',
+                            data: {'fullname':fullName, 'phone':phone, 'email': email, 'adress': adresse,'image_tshirt': image},
+                            type: 'post',
+                            success: function(output) {
+                                        if(output){
+                                            $.alert({
+                                                title: 'Bravo!',
+                                                type: 'green',
+                                                content: 'Nous vous remercionsn pour votre commande. Conformément à notre offre, nous vous fournissons le t-shirt suivant:\n <img src="'+image+'" />',
+                                            });
+                                        }
+                                    }
+                            });
+                        console.log('get image : '+image);
+                    }).catch(function (error) {
+                        console.error('oops, something went wrong!', error);
+                    });
+                }
+            },
+            cancel: function(){
+                    console.log('the user clicked cancel');
+            }
+        }
+     });
+    
 
 
 
@@ -52,6 +67,7 @@ $(function() {
     });
     
 });
+
 
 function isValide(){
      //Get fullName from Form to Verify if it is empty
