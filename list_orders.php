@@ -30,6 +30,7 @@
                         <th>ID</th>
                         <th>FULLNAME</th>
                         <th>TELEPHONE</th>
+                        <th>EMAIL</th>
                         <th>ADRESS</th>
                         <th>ACTION</th>
                     </tr>
@@ -45,6 +46,7 @@
                 <td><?php echo $i; ?></td>
                 <td><?php echo $row ["fullName"]?></td>
                 <td><?php echo $row["Phone"]; ?></td>
+                <td><?php echo $row["email"]; ?></td>
                 <td><?php echo $row["Adress"]; ?></td>
 
                  <td>
