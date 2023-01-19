@@ -6,7 +6,7 @@ $(function() {
         if(fullName == ""){
             $.alert({
                 title: 'Alert!',
-                content: 'merci d\'entrer votre nom complet',
+                content: 'merci d\'entrer votre nom complet!',
             });
             return;
         }
@@ -15,7 +15,7 @@ $(function() {
         if(email == ""){
             $.alert({
                 title: 'Alert!',
-                content: 'merci d\'entrer votre email',
+                content: 'merci d\'entrer votre email!',
             });
             return;
         }
@@ -33,7 +33,7 @@ $(function() {
         if(phone == ""){
             $.alert({
                 title: 'Alert!',
-                content: 'merci d\'entrer votre numéro de telephone',
+                content: 'merci d\'entrer votre numéro de telephone!',
             });
             return;
         }
@@ -49,8 +49,14 @@ $(function() {
 
         
         
-        var email  = $.trim($('#txt_adress').val());
-
+        var adresse  = $.trim($('#txt_adress').val());
+        if(adresse == ""){
+            $.alert({
+                title: 'Alert!',
+                content: 'merci d\'entrer votre adresse!',
+            });
+            return;
+        }
         
 
     })
