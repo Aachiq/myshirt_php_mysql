@@ -18,15 +18,32 @@ $(function() {
         let email  = $.trim($('#txt_email').val());
         let adresse  = $.trim($('#txt_adress').val());
 
-        let image = 'demo_Image';
+        
+        var node = document.getElementById('tshirt-div');
+        domtoimage.toPng(node).then(function (dataUrl) {
+            // Print the data URL of the picture in the Console
+            console.log(dataUrl);
 
-        $.ajax({ url: './add_order.php',
-         data: {'fullname':fullName, 'phone':phone, 'email': email, 'adress': adresse,'image_tshirt': image},
-         type: 'post',
-         success: function(output) {
-                      alert(output);
-                  }
-});
+            let image = dataUrl;
+            $.ajax({ url: './add_order.php',
+                data: {'fullname':fullName, 'phone':phone, 'email': email, 'adress': adresse,'image_tshirt': image},
+                type: 'post',
+                success: function(output) {
+                            if(output){
+                                $.alert({
+                                    title: 'Alert!',
+                                    type: 'green',
+                                    content: 'Votre commande est inserer avec success\n <img src="'+image+'" />',
+                                });
+                            }
+                        }
+                });
+            console.log('get image : '+image);
+        }).catch(function (error) {
+            console.error('oops, something went wrong!', error);
+        });
+
+        
 
 
 
@@ -42,6 +59,7 @@ function isValide(){
      if(fullName == ""){
          $.alert({
              title: 'Alert!',
+             type: 'red',
              content: 'merci d\'entrer votre nom complet!',
          });
          return false;
@@ -52,6 +70,7 @@ function isValide(){
      if(email == ""){
          $.alert({
              title: 'Alert!',
+             type: 'red',
              content: 'merci d\'entrer votre email!',
          });
          return false;
@@ -61,6 +80,7 @@ function isValide(){
      if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email) == false){
          $.alert({
              title: 'Alert!',
+             type: 'red',
              content: 'merci d\'entrer email valide !!',
          });
          return false;
@@ -71,6 +91,7 @@ function isValide(){
      if(phone == ""){
          $.alert({
              title: 'Alert!',
+             type: 'red',
              content: 'merci d\'entrer votre numéro de telephone!',
          });
          return false;
@@ -80,6 +101,7 @@ function isValide(){
      if(/^0[5|6|7]\d{8}$/.test(phone) == false){
          $.alert({
              title: 'Alert!',
+             type: 'red',
              content: 'merci d\'entrer un numéro de telephone valide !! (ex: 0 (5|6|7) + 8 numbers )',
          });
          return false; 
@@ -90,6 +112,7 @@ function isValide(){
      if(adresse == ""){
          $.alert({
              title: 'Alert!',
+             type: 'red',
              content: 'merci d\'entrer votre adresse!',
          });
          return false;

@@ -292,7 +292,7 @@
         <!-- SimpleLightbox plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
 
-        <script src="js/validate_form.js"></script>
+       
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
         <!-- Js Library -->
@@ -301,6 +301,8 @@
         <!-- Include dom-to-image.js in the page -->
         <script src="js/dom-to-image.min.js"></script>
         <script src="js/script2.js" ></script>
+         <!-- Include validate_form.js in the page -->
+        <script src="js/validate_form.js"></script>
         <!-- end JS library link -->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
