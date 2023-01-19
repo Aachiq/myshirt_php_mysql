@@ -208,9 +208,9 @@
                     <br><br>
                     <label for="tshirt-custompicture">Upload your own design:</label>
                     <input type="file" id="tshirt-custompicture" />
-                    <br>
+                    <!--br>
                     <label for="Download-image-result">Download image Result </label>
-                    <button class="btn btn-primary" onclick="Download_image()">Download </button>
+                    <button class="btn btn-primary" onclick="Download_image()">Download </button-->
                     <br>
                     <form id="frm_Add_Order" action="add_order.php" method="post" >
                         <lable>Nom Complet </lable>

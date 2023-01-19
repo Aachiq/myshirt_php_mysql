@@ -31,7 +31,7 @@ $(function() {
                 success: function(output) {
                             if(output){
                                 $.alert({
-                                    title: 'Alert!',
+                                    title: 'Bravo!',
                                     type: 'green',
                                     content: 'Votre commande est inserer avec success\n <img src="'+image+'" />',
                                 });
