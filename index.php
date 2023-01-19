@@ -212,7 +212,7 @@
                     <label for="Download-image-result">Download image Result </label>
                     <button class="btn btn-primary" onclick="Download_image()">Download </button>
                     <br>
-                    <form id="frm_Add_Order" action="add_order.php" method="post">
+                    <form id="frm_Add_Order" action="add_order.php" method="post" >
                         <lable>Nom Complet </lable>
                         <input class="form-control" name="fullname" id="txt_fullname"type="text">
                         <lable>Adresse Electronique </lable>
@@ -221,9 +221,9 @@
                         <input class="form-control" name="phone" id="txt_phone" type="text" max="10">
                         <lable>Adresse </lable>
                         <input class="form-control" name="adress" id="txt_adress" type="text"> <br>
-                        <label for="tshirt-custompicture">Chosen T-shirt</label>
-                        <input type="file" id="tshirt-custompicture" />
-                        <button id="frm_Add_Order_Submit" type="submit" class="btn btn-primary">Valider</button>
+                        <!--label for="tshirt-custompicture">Chosen T-shirt</label>
+                        <input type="file" id="tshirt-custompicture" /-->
+                        <input id="frm_Add_Order_Submit" type="submit" class="btn btn-primary"  value="Valider"/>
                     </form>
 
                 </div>
@@ -291,6 +291,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- SimpleLightbox plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+
+        <script src="js/validate-form.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
         <!-- Js Library -->
@@ -304,10 +306,10 @@
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <!--script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script-->
 
 
-        <script src="js/validate-form.js"></script>
+     
         <script>
     
     function sendata(){
