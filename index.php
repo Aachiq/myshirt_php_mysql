@@ -221,8 +221,8 @@
                         <input class="form-control" name="phone" id="txt_phone" type="text" maxlength="10">
                         <lable>Adresse </lable>
                         <input class="form-control" name="adress" id="txt_adress" type="text"> <br>
-                        <!--label for="tshirt-custompicture">Chosen T-shirt</label>
-                        <input type="file" id="tshirt-custompicture" /-->
+                        <label for="tshirt-qte">Quantité</label>
+                        <input type="number" id="txt_qte" step="1" value="1" min="1" mx="150">
                         <input id="frm_Add_Order_Submit" type="submit" class="btn btn-primary"  value="Valider"/>
                     </form>
 

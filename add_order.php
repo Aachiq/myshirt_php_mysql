@@ -4,6 +4,7 @@ include './database/connexion.php';
     $fullname=$_POST['fullname'];
     $phone=$_POST['phone'];
     $email=$_POST['email'];
+    $qte=$_POST['qte'];
     $adress=$_POST['adress'];
     $image_tshirt=$_POST['image_tshirt'];
 
@@ -20,8 +21,8 @@ include './database/connexion.php';
     echo 'Failure'; 
     }*/
 
-    $sql = "INSERT INTO `commande`(`fullname`,`Phone`,`email`,`Adress`,`image_tshirt`) 
-    VALUES ('$fullname','$phone','$email','$adress','$image_tshirt')";
+    $sql = "INSERT INTO `commande`(`fullname`,`Phone`,`email`,`qte`,`Adress`,`image_tshirt`) 
+    VALUES ('$fullname','$phone','$email','$qte','$adress','$image_tshirt')";
     $result = mysqli_query($conn, $sql);
     if($result){
       //  header('Location: index.php');

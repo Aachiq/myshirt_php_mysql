@@ -26,6 +26,7 @@ $(function() {
                     let phone  = $.trim($('#txt_phone').val());
                     let email  = $.trim($('#txt_email').val());
                     let adresse  = $.trim($('#txt_adress').val());
+                    let qte  = $.trim($('#txt_qte').val());
 
                     
                     var node = document.getElementById('tshirt-div');
@@ -35,7 +36,7 @@ $(function() {
 
                         let image = dataUrl;
                         $.ajax({ url: './add_order.php',
-                            data: {'fullname':fullName, 'phone':phone, 'email': email, 'adress': adresse,'image_tshirt': image},
+                            data: {'fullname':fullName, 'phone':phone, 'email': email, 'adress': adresse,'image_tshirt': image, 'qte': qte},
                             type: 'post',
                             success: function(output) {
                                         if(output){
@@ -133,6 +134,26 @@ function isValide(){
          });
          return false;
      }
+
+     //Get Qte from Form to Verify if it is empty
+     var qte  = $.trim($('#txt_qte').val());
+     if(qte == ""){
+         $.alert({
+             title: 'Alert!',
+             type: 'red',
+             content: 'merci d\'entrer la Quantité!',
+         });
+         return false;
+     }
+
+     if(Number(qte) < 1){
+        $.alert({
+            title: 'Alert!',
+            type: 'red',
+            content: 'merci d\'entrer une Quantité superieur ou égal à 1!',
+        });
+        return false;
+    }
 
      //Valide
      return true;
