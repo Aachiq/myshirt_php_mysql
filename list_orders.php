@@ -32,7 +32,12 @@
                         <th>TELEPHONE</th>
                         <th>EMAIL</th>
                         <th>ADRESS</th>
+                        <th>QUANTITE</th>
+                        <th>IMAGE</th>
                         <th>ACTION</th>
+
+
+                       
                     </tr>
                 </thead>
                 <tbody>
@@ -48,6 +53,8 @@
                 <td><?php echo $row["Phone"]; ?></td>
                 <td><?php echo $row["email"]; ?></td>
                 <td><?php echo $row["Adress"]; ?></td>
+                <td><?php echo $row["qte"]; ?></td>
+                <td><img width="100" height="100" src="<?php echo $row["image_tshirt"]; ?>" alt="<?php echo $row ["fullName"]?>"></td>
 
                  <td>
                     <a href="delete_order.php?id=<?php echo $row["id"]; ?>" 

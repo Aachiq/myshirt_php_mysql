@@ -183,7 +183,7 @@
             <div class="row p-4" >
                 <div class="col-md-6">
                     <div id="tshirt-div" style="width: 452px;height: 548px;position: relative;background-color: #fff;">
-                        <img id="tshirt-backgroundpicture" src="images/background_tshirt.png" />
+                        <img id="tshirt-backgroundpicture" src="assets/img/background_tshirt.png" />
                         <div id="drawingArea" class="drawing-area" style="position: absolute;top: 60px;left: 122px;z-index: 10;width: 200px;height: 400px;">					
                             <div class="canvas-container" style="width: 200px; height: 400px; position: relative; user-select: none;">
                                 <canvas id="tshirt-canvas" width="200" height="400" style="position: absolute;width: 200px;height: 400px; left: 0px; top: 0px; user-select: none; cursor: default;"></canvas>

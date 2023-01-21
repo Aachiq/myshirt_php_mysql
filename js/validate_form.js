@@ -44,6 +44,16 @@ $(function() {
                                                 title: 'Félicitation',
                                                 type: 'green',
                                                 content: 'Nous vous remercionsn pour votre commande. Conformément à notre offre, nous vous fournissons le t-shirt suivant:\n <img src="'+image+'" />',
+                                                buttons: {   
+                                                    ok: {
+                                                        text: "ok",
+                                                        btnClass: 'btn-primary',
+                                                        keys: ['enter'],
+                                                        action: function(){
+                                                            window.location.reload();
+                                                            }
+                                                        }
+                                                    }
                                             });
                                         }
                                     }
